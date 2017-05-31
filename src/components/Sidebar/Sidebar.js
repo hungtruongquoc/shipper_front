@@ -137,23 +137,9 @@ class Sidebar extends Component {
        <nav className="sidebar-nav">
          <ul className="nav">
            <li className="nav-title">
-             Shippers
+             {this.props.title}
            </li>
-           <li className="nav-item">
-             <Link to={'/dashboard'} className="nav-link" activeClassName="active">
-               <i className="icon-speedometer"/> Tổng hợp
-             </Link>
-           </li>
-           <li className="nav-item">
-             <Link to={'/orders'} className="nav-link" activeClassName="active">
-               <i className="icon-basket-loaded"/> Đơn hàng
-             </Link>
-           </li>
-           <li className="nav-item">
-             <Link to={'/inventory'} className="nav-link" activeClassName="active">
-               <i className="fa fa-fw fa-cubes"/> Tồn kho
-             </Link>
-           </li>
+           {this.props.children}
          </ul>
        </nav>
       </div>

@@ -1,22 +1,22 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router'
 
 import OrderSummary from './orders'
-import CustomerSummary from './customers'
-import InventorySummary from './inventory'
+import Sidebar from '../../components/Sidebar/Sidebar'
+import NavItem from '../../components/Sidebar/NavItem'
 
 class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard-content">
         <div className="row">
-          <div className="col-4">
+          <div className="col">
+            <Sidebar title="Tổng hợp">
+              <NavItem>
+                <Link to={'/dashboard'} className="nav-link" activeClassName="active" >Tổng hợp</Link>
+              </NavItem>
+            </Sidebar>
             <div className="row"><OrderSummary/></div>
-          </div>
-          <div className="col-4">
-            <div className="row"><CustomerSummary/></div>
-          </div>
-          <div className="col-4">
-            <div className="row"><InventorySummary/></div>
           </div>
         </div>
       </div>

@@ -93,7 +93,9 @@ export default (
     <Route path="/" name="Home" component={Full}>
       <IndexRoute component={Dashboard}/>
       <Route path="dashboard" name="Tổng hơp" component={Dashboard}/>
-      <Route path="orders" name="Đơn hàng" component={OrderList}/>
+      <Route path="orders" name="Đơn hàng" component={OrderList}>
+        <IndexRoute component = {OrderList}/>
+      </Route>
     </Route>
   </Router>
 );

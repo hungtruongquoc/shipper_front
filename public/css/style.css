@@ -13789,8 +13789,13 @@ base-chart.chart {
   height: 35px;
   margin: 0 10px; }
 
-.sidebar .sidebar-nav, .sidebar ul.nav {
-  width: 224px; }
+.sidebar {
+  left: 0;
+  top: 55px; }
+  .sidebar .sidebar-nav {
+    width: 224px; }
+  .sidebar ul.nav {
+    width: 224px; }
 
 .email-app {
   display: flex;
