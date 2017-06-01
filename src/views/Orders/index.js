@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router'
+
 import Table from "../../components/Table/table"
 import TableBody from "../../components/Table/body"
 import TableHeader from "../../components/Table/header"
@@ -30,7 +32,7 @@ class OrderList extends Component {
                 <ContentCell>Anh Hùng</ContentCell>
                 <ContentCell className="text-center">14/02/2017</ContentCell>
                 <ContentCell className="text-right">$100</ContentCell>
-                <ContentCell><a href="#">Xem chi tiết</a></ContentCell>
+                <ContentCell><Link to={'/orders/detail'}>Xem chi tiết</Link></ContentCell>
               </TableRow>
               <TableRow>
                 <ContentCell>20170710</ContentCell>
@@ -38,7 +40,7 @@ class OrderList extends Component {
                 <ContentCell>Anh Hùng</ContentCell>
                 <ContentCell className="text-center">14/02/2017</ContentCell>
                 <ContentCell className="text-right">$100</ContentCell>
-                <ContentCell><a href="#">Xem chi tiết</a></ContentCell>
+                <ContentCell><Link to={'/orders/detail'}>Xem chi tiết</Link></ContentCell>
               </TableRow>
             </TableBody>
           </Table>

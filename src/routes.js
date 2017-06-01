@@ -5,6 +5,7 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import Full from './containers/Full/'
 import Dashboard from './views/dashboard/dashboard'
 import OrderList from './views/Orders/index'
+import OrderDetail from './views/Orders/detail'
 
 // import Simple from './containers/Simple/'
 //
@@ -93,8 +94,9 @@ export default (
     <Route path="/" name="Home" component={Full}>
       <IndexRoute component={Dashboard}/>
       <Route path="dashboard" name="Tổng hơp" component={Dashboard}/>
-      <Route path="orders" name="Đơn hàng" component={OrderList}>
+      <Route path="orders" name="Đơn hàng">
         <IndexRoute component = {OrderList}/>
+        <Route path="detail" name="Chi tiết đơn hàng" component={OrderDetail}/>
       </Route>
     </Route>
   </Router>
