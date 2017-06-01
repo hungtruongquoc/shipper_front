@@ -23,7 +23,19 @@ class OrderDetail extends Component {
           </div>
         </div>
       </div>
-      <div className="row item-list">
+      <div className="row total-amount">
+        <div className="col-12 col-sm-4">
+          <div className="form-group row">
+            <label className="col-sm-4 col-form-label text-right">
+              <a href="#order-item-list" data-toggle="collapse" aria-expanded="false" aria-controls="order-item-list"><strong>Tổng thành tiền</strong></a>
+            </label>
+            <div className="col-sm-4">
+              <p className="form-control-static text-right">$70.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="order-item-list" className="row item-list collapse">
         <div className="col">
           <Table>
           <TableHeader>
@@ -60,18 +72,20 @@ class OrderDetail extends Component {
           </Table>
         </div>
       </div>
-      <div className="row total-amount">
+      <div className="row total-paid">
         <div className="col-12 col-sm-4">
           <div className="form-group row">
-            <label className="col-sm-4 col-form-label text-right"><strong>Tổng thành tiền</strong></label>
-            <div className="col-sm-8">
-              <p className="form-control-static">$70.00</p>
+            <label className="col-sm-4 col-form-label text-right">
+              <a href="#order-item-list" data-toggle="collapse" aria-expanded="false" aria-controls="order-item-list"><strong>Tổng thanh toán</strong></a>
+            </label>
+            <div className="col-sm-4">
+              <p className="form-control-static text-right">$70.00</p>
             </div>
           </div>
         </div>
       </div>
     </div> </CardBody>}
-      header={<CardHeader> <div className="row">
+      header={<CardHeader className="bg-success text-white"> <div className="row">
       <div className="col-6">
         <h5>Đơn hàng số: DH1234556</h5>
       </div>
