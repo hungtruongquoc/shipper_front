@@ -57,10 +57,18 @@ class OrderDetail extends Component {
               <div className="row">
                 <div className="col hidden-md-up">
                   <ul className="fa-ul">
-                    <li><i className="fa fa-li fa-truck fa-flip-horizontal"/> 14/02/2017 14:02</li>
-                    <li><i className="fa fa-li fa-cart-plus"/> 14/02/2017 09:02</li>
-                    <li><i className="fa fa-li fa-dollar"/> 14/02/2017 08:02</li>
-                    <li><i className="fa fa-li fa-file-text-o"/> 14/02/2017 07:02</li>
+                    <li><i className="fa fa-li fa-truck fa-flip-horizontal"/>
+                      <div className="row">
+                        <div className="col-5 text-center">14/02/2017</div>
+                        <div className="col-2">14:02</div>
+                        <div className="col-2"><Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link></div>
+                      </div>
+                    </li>
+                    <li><i className="fa fa-li fa-cart-plus"/> 14/02/2017 09:02 <Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link></li>
+                    <li><i className="fa fa-li fa-dollar"/> 14/02/2017 08:02 <Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link></li>
+                    <li>
+                      <i className="fa fa-li fa-file-text-o"/> 14/02/2017 07:02 <Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link>
+                    </li>
                   </ul>
                 </div>
                 <div className="col hidden-sm-down">
@@ -115,11 +123,14 @@ class OrderDetail extends Component {
         </CardBody>}
               header={<CardHeader className="bg-danger text-white">
                 <div className="row">
-                  <div className="col-6">
-                    <h5>Đơn hàng DH1234556</h5>
+                  <div className="col-9 col-sm-6">
+                    <h5>Đơn hàng DH12345567</h5>
                   </div>
-                  <div className="col-6 text-right">
+                  <div className="col-sm-6 hidden-sm-down text-right">
                     <h5><i className="fa fa-spin fa-spinner"/> Gửi hàng</h5>
+                  </div>
+                  <div className="col-3 hidden-md-up">
+                    <h5><i className="fa fa-spin fa-spinner"/> <i className="fa fa-fw fa-truck fa-flip-horizontal"/></h5>
                   </div>
                 </div>
               </CardHeader>}/>

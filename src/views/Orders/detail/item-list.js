@@ -10,7 +10,7 @@ class OrderItemList extends Component{
   render() {
     return (
       <div id="order-item-list" className="row item-list">
-        <div className="col">
+        <div className="col hidden-sm-down">
           <Table>
             <TableHeader>
               <TableRow>
