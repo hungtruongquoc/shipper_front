@@ -12,8 +12,8 @@ class Full extends Component {
         <Header />
         <div className="app-body">
           <main className="main">
-            <Breadcrumbs wrapperElement="ol" wrapperClass="breadcrumb mb-0" itemClass="breadcrumb-item"
-              separator="" routes={this.props.routes} params={this.props.params}/>
+            {/*<Breadcrumbs wrapperElement="ol" wrapperClass="breadcrumb mb-0" itemClass="breadcrumb-item"*/}
+              {/*separator="" routes={this.props.routes} params={this.props.params}/>*/}
             <div className="container-fluid">
               {this.props.children}
             </div>

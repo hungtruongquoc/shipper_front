@@ -1,6 +1,5 @@
 import React from 'react';
-import { useBasename } from 'history'
-import {BrowserRouter as Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 
 // Containers
 import Full from './containers/Full/'
@@ -91,16 +90,16 @@ import OrderDetail from './views/Orders/detail'
 // );
 
 export default (
-  <Router history={browserHistory}>
-    <Route path="/" name="Home" component={Full}>
-      <IndexRoute component={Dashboard}/>
-      <Route path="dashboard" name="Tổng hơp" component={Dashboard}/>
-      <Route path="orders" name="Đơn hàng">
-        <IndexRoute component = {OrderList}/>
-        <Route path="detail" name="Chi tiết đơn hàng" component={OrderDetail}/>
-      </Route>
-        <Route path="docs" name="Chứng từ">
+  <Router basename="/">
+    <Full>
+      <Switch>
+        <Route path="/docs" name="Chứng từ"/>
+        <Route path="/orders/detail" name="Chi tiết đơn hàng" component={OrderDetail}/>
+        <Route path="/orders" name="Đơn hàng" component={OrderList}/>
+        <Route path="/dashboard" name="Tổng hơp" component={Dashboard}/>
+        <Route path="/" name="Home">
+          <Redirect to="/dashboard" />
         </Route>
-    </Route>
-  </Router>
-);
+      </Switch>
+    </Full>
+  </Router>)

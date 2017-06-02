@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 
 import OrderSummary from './orders'
 import Sidebar from '../../components/Sidebar/Sidebar'

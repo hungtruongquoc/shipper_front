@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Dropdown, DropdownMenu, DropdownItem} from 'reactstrap';
-import {Link} from 'react-router'
+import {NavLink} from 'react-router-dom'
 
 class Header extends Component {
 
@@ -52,19 +52,19 @@ class Header extends Component {
               href="#">&#9776;</a>
           </li>
           <li className="nav-item px-1">
-            <Link to={'/dashboard'} className="nav-link" activeClassName="active">
+            <NavLink to={'/dashboard'} className="nav-link" activeClassName="active">
               <i className="icon-speedometer"/> Tổng hợp
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item px-1">
-            <Link to={'/orders'} className="nav-link" activeClassName="active">
+            <NavLink to={'/orders'} className="nav-link" activeClassName="active">
               <i className="icon-basket-loaded"/> Đơn hàng
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item px-1">
-            <Link to={'/docs'} className="nav-link" activeClassName="active">
+            <NavLink to={'/docs'} className="nav-link" activeClassName="active">
               <i className="icon-docs"/> Chứng từ
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item px-1">
             <a className="nav-link" href="#">Settings</a>
