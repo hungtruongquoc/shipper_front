@@ -20,7 +20,6 @@ class OrderItemList extends Component{
                 <HeaderCell>ĐVT</HeaderCell>
                 <HeaderCell className="text-right">Đơn giá</HeaderCell>
                 <HeaderCell className="text-right">Thành tiền</HeaderCell>
-                <HeaderCell>Phiếu đóng hàng</HeaderCell>
               </TableRow>
             </TableHeader>
             <TableBody>
