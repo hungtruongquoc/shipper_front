@@ -1,5 +1,6 @@
 import React from 'react';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import { useBasename } from 'history'
+import {BrowserRouter as Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 // Containers
 import Full from './containers/Full/'
