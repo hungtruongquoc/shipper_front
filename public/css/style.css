@@ -13955,9 +13955,12 @@ base-chart.chart {
               margin: -2px 0px 0px 5px;
               color: #d1d4d7; }
 
-header.navbar a.navbar-brand {
+body header.navbar a.navbar-brand {
   background-image: none;
   text-align: center; }
 
-.sk-wave .sk-rect {
+body .sk-wave .sk-rect {
   margin-right: 2px; }
+
+body div.form-value {
+  border-bottom: solid .5px black; }

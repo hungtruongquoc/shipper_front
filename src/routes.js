@@ -98,6 +98,8 @@ export default (
         <IndexRoute component = {OrderList}/>
         <Route path="detail" name="Chi tiết đơn hàng" component={OrderDetail}/>
       </Route>
+        <Route path="docs" name="Chứng từ">
+        </Route>
     </Route>
   </Router>
 );

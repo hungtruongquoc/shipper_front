@@ -92,19 +92,26 @@
 @import "custom";
 // UI Kits
 @import "uikits/uikits";
-header {
-  &.navbar {
-    a {
-      &.navbar-brand {
+
+body {
+  header {
+    &.navbar {
+      a {
+        &.navbar-brand {
           background-image: none;
           text-align: center;
+        }
       }
     }
   }
-}
 
-.sk-wave {
-  .sk-rect {
-    margin-right: 2px;
+  .sk-wave {
+    .sk-rect {
+      margin-right: 2px;
+    }
+  }
+
+  div.form-value {
+    border-bottom: solid .5px black;
   }
 }

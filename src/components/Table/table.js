@@ -4,6 +4,7 @@ import Pagination from '../Pagination/pagination';
 class Table extends Component {
   render() {
     let tableClasses = ['table'];
+    this.row = 0;
     if(this.props.striped) {
       tableClasses.push('table-striped');
     }
@@ -22,7 +23,9 @@ class Table extends Component {
       <table className={tableClasses.join(' ')}>
         {this.props.children}
       </table>
-      <Pagination className={paginationClasses.join(' ')}/>
+        {
+          this.row > 5 ? <Pagination className={paginationClasses.join(' ')}/> : null
+        }
     </div>
     )
   }

@@ -62,24 +62,29 @@ class Header extends Component {
             </Link>
           </li>
           <li className="nav-item px-1">
+            <Link to={'/docs'} className="nav-link" activeClassName="active">
+              <i className="icon-docs"/> Chứng từ
+            </Link>
+          </li>
+          <li className="nav-item px-1">
             <a className="nav-link" href="#">Settings</a>
           </li>
         </ul>
         <ul className="nav navbar-nav ml-auto">
           <li className="nav-item hidden-md-down">
             <a className="nav-link" href="#">
-              <i className="icon-bell"></i>
+              <i className="icon-bell"/>
               <span className="badge badge-pill badge-danger">5</span>
             </a>
           </li>
           <li className="nav-item hidden-md-down">
             <a className="nav-link" href="#">
-              <i className="icon-list"></i>
+              <i className="icon-list"/>
             </a>
           </li>
           <li className="nav-item hidden-md-down">
             <a className="nav-link" href="#">
-              <i className="icon-location-pin"></i>
+              <i className="icon-location-pin"/>
             </a>
           </li>
           <li className="nav-item">
@@ -105,19 +110,19 @@ class Header extends Component {
                 </DropdownItem>
 
                 <DropdownItem>
-                  <i className="fa fa-bell-o"></i>
+                  <i className="fa fa-bell-o"/>
                   Updates<span className="badge badge-info">42</span>
                 </DropdownItem>
                 <DropdownItem>
-                  <i className="fa fa-envelope-o"></i>
+                  <i className="fa fa-envelope-o"/>
                   Messages<span className="badge badge-success">42</span>
                 </DropdownItem>
                 <DropdownItem>
-                  <i className="fa fa-tasks"></i>
+                  <i className="fa fa-tasks"/>
                   Tasks<span className="badge badge-danger">42</span>
                 </DropdownItem>
                 <DropdownItem>
-                  <i className="fa fa-comments"></i>
+                  <i className="fa fa-comments"/>
                   Comments<span className="badge badge-warning">42</span>
                 </DropdownItem>
 
@@ -126,25 +131,25 @@ class Header extends Component {
                 </DropdownItem>
 
                 <DropdownItem>
-                  <i className="fa fa-user"></i>
+                  <i className="fa fa-user"/>
                   Profile</DropdownItem>
                 <DropdownItem>
-                  <i className="fa fa-wrench"></i>
+                  <i className="fa fa-wrench"/>
                   Settings</DropdownItem>
                 <DropdownItem>
-                  <i className="fa fa-usd"></i>
+                  <i className="fa fa-usd"/>
                   Payments<span className="badge badge-default">42</span>
                 </DropdownItem>
                 <DropdownItem>
-                  <i className="fa fa-file"></i>
+                  <i className="fa fa-file"/>
                   Projects<span className="badge badge-primary">42</span>
                 </DropdownItem>
                 <DropdownItem divider/>
                 <DropdownItem>
-                  <i className="fa fa-shield"></i>
+                  <i className="fa fa-shield"/>
                   Lock Account</DropdownItem>
                 <DropdownItem>
-                  <i className="fa fa-lock"></i>
+                  <i className="fa fa-lock"/>
                   Logout</DropdownItem>
 
               </DropdownMenu>

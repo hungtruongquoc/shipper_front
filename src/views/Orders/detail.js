@@ -2,97 +2,91 @@ import React, {Component} from 'react'
 import Card from '../../components/Card/card'
 import CardBody from '../../components/Card/body'
 import CardHeader from '../../components/Card/header'
-import Table from '../../components/Table/table'
-import TableBody from '../../components/Table/body'
-import TableHeader from '../../components/Table/header'
-import TableRow from '../../components/Table/row'
-import HeaderCell from '../../components/Table/cell_header'
-import ContentCell from '../../components/Table/cell_content'
+import OrderHeader from './detail/header'
+import OrderItemList from './detail/item-list'
 
 class OrderDetail extends Component {
+  constructor() {
+    super();
+    this.data = {
+      customer: {
+        name: 'A Huỳnh'
+      },
+      orderDate: '14/02/2017',
+      shippingDate: '15/03/2017',
+      shippingAddress: '1024 Cornell Dr., Carrollton, TX 75007',
+      items: [{
+        quantity: 1,
+        productName: 'Quần jean Levi',
+        unitPrice: 35
+      }, {
+        quantity: 1,
+        productName: 'Quần jean Aeropostale',
+        unitPrice: 35
+      }]
+    }
+  }
   render() {
     return (<Card
-      body={<CardBody> <div className="order-detail">
-      <div className="row">
-        <div className="col-12 col-sm-4">
-          <div className="form-group row">
-            <label className="col-sm-4 col-form-label text-right"><strong>Khách hàng</strong></label>
-            <div className="col-sm-8">
-              <p className="form-control-static">A Huỳnh</p>
+      body={<CardBody>
+        <div className="order-detail">
+          <OrderHeader order={this.data}/>
+          <div className="row">
+            <div className="col">
+              <ul className="nav nav-tabs" role="tablist">
+                <li className="nav-item">
+                  <a className="nav-link active" data-toggle="tab" href="#header" role="tab" aria-controls="header"
+                     aria-expanded="true">
+                    DS Sản Phẩm
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" data-toggle="tab" href="#receipt" role="tab" aria-controls="receipt"
+                     aria-expanded="false">
+                    Biên nhận
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" data-toggle="tab" href="#package-receipt" role="tab" aria-controls="package-receipt"
+                     aria-expanded="false">
+                    Phiếu nhận hàng
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" data-toggle="tab" href="#packing-slip" role="tab" aria-controls="packing-slip"
+                     aria-expanded="false">
+                    Phiếu xuất hàng
+                  </a>
+                </li>
+              </ul>
+              <div className="tab-content">
+                <div className="tab-pane active" id="header" role="tabpanel" aria-expanded="true">
+                  <OrderItemList order={this.data}/>
+                </div>
+                <div className="tab-pane" id="receipt" role="tabpanel" aria-expanded="false">
+
+                </div>
+                <div className="tab-pane" id="package-receipt" role="tabpanel" aria-expanded="false">
+
+                </div>
+                <div className="tab-pane" id="packing-slip" role="tabpanel" aria-expanded="false">
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="row total-amount">
-        <div className="col-12 col-sm-4">
-          <div className="form-group row">
-            <label className="col-sm-4 col-form-label text-right">
-              <a href="#order-item-list" data-toggle="collapse" aria-expanded="false" aria-controls="order-item-list"><strong>Tổng thành tiền</strong></a>
-            </label>
-            <div className="col-sm-4">
-              <p className="form-control-static text-right">$70.00</p>
-            </div>
+      </CardBody>}
+      header={<CardHeader className="bg-success text-white">
+        <div className="row">
+          <div className="col-6">
+            <h5>Đơn hàng DH1234556</h5>
+          </div>
+          <div className="col-6 text-right">
+            <h5>Đã thanh toán</h5>
           </div>
         </div>
-      </div>
-      <div id="order-item-list" className="row item-list collapse">
-        <div className="col">
-          <Table>
-          <TableHeader>
-            <TableRow>
-              <HeaderCell className="text-right">STT</HeaderCell>
-              <HeaderCell>Tên</HeaderCell>
-              <HeaderCell className="text-right">Số lượng</HeaderCell>
-              <HeaderCell>ĐVT</HeaderCell>
-              <HeaderCell className="text-right">Đơn giá</HeaderCell>
-              <HeaderCell className="text-right">Thành tiền</HeaderCell>
-              <HeaderCell>Phiếu đóng hàng</HeaderCell>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <ContentCell className="text-right">1</ContentCell>
-              <ContentCell>Quần jean Levi</ContentCell>
-              <ContentCell className="text-right">1</ContentCell>
-              <ContentCell>Cái</ContentCell>
-              <ContentCell className="text-right">$35.00</ContentCell>
-              <ContentCell className="text-right">${1*35}.00</ContentCell>
-              <ContentCell></ContentCell>
-            </TableRow>
-            <TableRow>
-              <ContentCell className="text-right">1</ContentCell>
-              <ContentCell>Quần jean Aeropostale</ContentCell>
-              <ContentCell className="text-right">1</ContentCell>
-              <ContentCell>Cái</ContentCell>
-              <ContentCell className="text-right">$35.00</ContentCell>
-              <ContentCell className="text-right">${1*35}.00</ContentCell>
-              <ContentCell></ContentCell>
-            </TableRow>
-          </TableBody>
-          </Table>
-        </div>
-      </div>
-      <div className="row total-paid">
-        <div className="col-12 col-sm-4">
-          <div className="form-group row">
-            <label className="col-sm-4 col-form-label text-right">
-              <a href="#order-item-list" data-toggle="collapse" aria-expanded="false" aria-controls="order-item-list"><strong>Tổng thanh toán</strong></a>
-            </label>
-            <div className="col-sm-4">
-              <p className="form-control-static text-right">$70.00</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> </CardBody>}
-      header={<CardHeader className="bg-success text-white"> <div className="row">
-      <div className="col-6">
-        <h5>Đơn hàng số: DH1234556</h5>
-      </div>
-      <div className="col-6 text-right">
-        <h5>Ngày đặt hàng: 14/02/2017</h5>
-      </div>
-    </div> </CardHeader>}/>);
+      </CardHeader>}/>);
   }
 }
 
