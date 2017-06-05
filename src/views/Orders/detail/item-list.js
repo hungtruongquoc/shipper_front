@@ -37,6 +37,9 @@ class OrderItemList extends Component{
             </TableBody>
           </Table>
         </div>
+        <div className="col hidden-md-up">
+
+        </div>
       </div>
     )
   }
