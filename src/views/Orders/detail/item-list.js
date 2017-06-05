@@ -24,7 +24,7 @@ class OrderItemList extends Component{
                   <td className="text-right">{index + 1}</td>
                   <td>{item.productName}</td>
                   <td className="text-right">{item.quantity}</td>
-                  <td>Cái</td>
+                  <td>{item.unitName}</td>
                   <td className="text-right">${item.unitPrice}</td>
                   <td className="text-right">${item.quantity * item.unitPrice}.00</td>
                   <td/>
@@ -38,10 +38,10 @@ class OrderItemList extends Component{
             {this.props.order.items.map((item,index) => {
               return (
                 <ListGroupItem key={index}>
-                  <div className="col-2">
-                    <h4>{item.quantity}</h4>
+                  <div className="col-12">
+                    <h4>{item.quantity} <small>{item.unitName}</small></h4>
                   </div>
-                  <div className="col-10">
+                  <div className="col-12">
                     {item.productName}
                   </div>
                 </ListGroupItem>
