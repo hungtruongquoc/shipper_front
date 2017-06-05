@@ -30,16 +30,14 @@ class OrderHeader extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-12 col-sm-12">
+          <div className="col-12 col-sm-8">
             <FormGroup className="row">
-              <Label for="shipping-date" className="col-sm-6 hidden-sm-down col-form-label text-right"><strong>Giao hàng tại</strong></Label>
+              <Label for="shipping-date" className="col-sm-3 hidden-sm-down col-form-label text-right"><strong>Giao hàng tại</strong></Label>
               <Label for="shipping-date" className="col-12 hidden-md-up col-form-label"><strong>Giao hàng tại</strong></Label>
-              <Input id="shipping-date" className="col-sm-6 col-12" static>{this.props.order.shippingAddress}</Input>
+              <Input id="shipping-date" className="col-sm-9 col-12" static>{this.props.order.shippingAddress}</Input>
             </FormGroup>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-12 col-sm-12">
+          <div className="col-12 col-sm-4">
             <FormGroup className="row">
               <Label for="shipping-type" className="col-sm-6 hidden-sm-down col-form-label text-right"><strong>Hình thức giao hàng</strong></Label>
               <Label for="shipping-type" className="col-7 hidden-md-up col-form-label"><strong>Hình thức giao hàng</strong></Label>
