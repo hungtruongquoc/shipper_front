@@ -20,11 +20,13 @@ class OrderDetail extends Component {
       items: [{
         quantity: 1,
         productName: 'Quần jean Levi',
-        unitPrice: 35
+        unitPrice: 35,
+        unitName: 'Cái'
       }, {
         quantity: 1,
         productName: 'Quần jean Aeropostale',
-        unitPrice: 35
+        unitPrice: 35,
+        unitName: 'Cái'
       }],
       events: [
         {
