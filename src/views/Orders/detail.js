@@ -18,6 +18,7 @@ class OrderDetail extends Component {
       orderDate: '14/02/2017',
       shippingDate: '15/03/2017',
       shippingAddress: '1024 Cornell Dr., Carrollton, TX 75007',
+      shippingType: 'Giao tại nhà',
       items: [{
         quantity: 1,
         productName: 'Quần jean Levi',
