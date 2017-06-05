@@ -64,7 +64,13 @@ class OrderDetail extends Component {
                         <div className="col-2"><Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link></div>
                       </div>
                     </li>
-                    <li><i className="fa fa-li fa-cart-plus"/> 14/02/2017 09:02 <Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link></li>
+                    <li><i className="fa fa-li fa-cart-plus"/>
+                      <div className="row">
+                        <div className="col-5 text-center">14/02/2017</div>
+                        <div className="col-2">09:02</div>
+                        <div className="col-2"><Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link></div>
+                      </div>
+                    </li>
                     <li><i className="fa fa-li fa-dollar"/> 14/02/2017 08:02 <Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link></li>
                     <li>
                       <i className="fa fa-li fa-file-text-o"/> 14/02/2017 07:02 <Link to="#"><i className="fa fa-fw fa-file-text-o"/></Link>
@@ -129,7 +135,7 @@ class OrderDetail extends Component {
                   <div className="col-sm-6 hidden-sm-down text-right">
                     <h5><i className="fa fa-spin fa-spinner"/> Gửi hàng</h5>
                   </div>
-                  <div className="col-3 hidden-md-up">
+                  <div className="col-3 col-sm-6 hidden-md-up text-right">
                     <h5><i className="fa fa-spin fa-spinner"/> <i className="fa fa-fw fa-truck fa-flip-horizontal"/></h5>
                   </div>
                 </div>
