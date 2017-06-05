@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 import CardGroup from '../../components/CardGroup/card-group';
 import CardGroupItem from '../../components/CardGroupItem/card-group-item';
+
 class Summary extends Component {
   render() {
     return (

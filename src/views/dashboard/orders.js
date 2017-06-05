@@ -41,7 +41,7 @@ class OrderSummary extends Component {
     }
     return (
       <div className="col">
-        <Card body={bodyWithData} header={<CardHeader><a href="orders"><h3>Đơn Hàng</h3></a></CardHeader>}></Card>
+        <Card body={bodyWithData} header={<CardHeader><a href="orders"><h3>Đơn Hàng</h3></a></CardHeader>} />
       </div>
     )
   }

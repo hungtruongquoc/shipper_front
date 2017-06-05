@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
-import {Table} from 'reactstrap'
+import Sidebar from '../../components/Sidebar/Sidebar'
+
+import {Table, NavItem, NavDropdown, DropdownItem, DropdownToggle, DropdownMenu} from 'reactstrap'
 
 
 class OrderList extends Component {
@@ -9,9 +11,20 @@ class OrderList extends Component {
     return (
       <div className="order-list-content">
         <div className="row">
-        <div className="col">
-        <Table>
-            <thead>
+          <Sidebar title="Đơn hàng">
+            <NavItem>
+              <Link to="#" className="nav-link">Danh sách đơn hàng</Link>
+            </NavItem>
+            <NavDropdown>
+              <DropdownToggle nav caret>Sắp xếp</DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Theo ngày</DropdownItem>
+              </DropdownMenu>
+            </NavDropdown>
+          </Sidebar>
+          <div className="col">
+            <Table>
+              <thead>
               <tr>
                 <th>Số</th>
                 <th>Tình trạng</th>
@@ -20,8 +33,8 @@ class OrderList extends Component {
                 <th className="text-right">Thành tiền</th>
                 <th/>
               </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
               <tr>
                 <td>20170710</td>
                 <td>Đã thanh toán</td>
@@ -38,9 +51,9 @@ class OrderList extends Component {
                 <td className="text-right">$100</td>
                 <td><Link to={'/orders/detail'}>Xem chi tiết</Link></td>
               </tr>
-            </tbody>
-          </Table>
-        </div>
+              </tbody>
+            </Table>
+          </div>
         </div>
       </div>
     )
