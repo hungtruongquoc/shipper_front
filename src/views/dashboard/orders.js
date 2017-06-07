@@ -3,6 +3,7 @@ import Card from '../../components/Card/card'
 import CardBody from '../../components/Card/body'
 import CardHeader from "../../components/Card/header"
 import SpinnerCircle from '../../components/Spinner/spinnerCircle'
+import {Link} from 'react-router-dom'
 
 class OrderSummary extends Component {
   data = false;
@@ -41,7 +42,7 @@ class OrderSummary extends Component {
     }
     return (
       <div className="col">
-        <Card body={bodyWithData} header={<CardHeader><a href="orders"><h3>Đơn Hàng</h3></a></CardHeader>} />
+        <Card body={bodyWithData} header={<CardHeader><Link to="orders"><h3>Đơn Hàng</h3></Link></CardHeader>} />
       </div>
     )
   }
