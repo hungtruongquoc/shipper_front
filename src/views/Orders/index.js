@@ -13,7 +13,19 @@ class OrderList extends Component {
         <div className="row">
           <Sidebar title="Đơn hàng">
             <NavItem>
-              <Link to="#" className="nav-link">Danh sách đơn hàng</Link>
+              <Link to="#" className="nav-link">Đơn hàng gần nhất</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="#" className="nav-link">Đơn hàng chưa hoàn thành</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="#" className="nav-link">Đơn hàng chưa thanh toán</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="#" className="nav-link">Đơn hàng chưa gửi hàng</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="#" className="nav-link">Đơn hàng chưa đặt hàng</Link>
             </NavItem>
             <NavDropdown>
               <DropdownToggle nav caret>Sắp xếp</DropdownToggle>
